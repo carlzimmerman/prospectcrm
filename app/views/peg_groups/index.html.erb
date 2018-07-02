@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Peg Groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firm name</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @peg_groups.each do |peg_group| %>
+      <tr>
+        <td><%= peg_group.firm_name %></td>
+        <td><%= peg_group.website %></td>
+        <td><%= link_to 'Show', peg_group %></td>
+        <td><%= link_to 'Edit', edit_peg_group_path(peg_group) %></td>
+        <td><%= link_to 'Destroy', peg_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peg group', new_peg_group_path %>

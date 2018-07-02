@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firm name:</strong>
+  <%= @peg_group.firm_name %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @peg_group.website %>
+</p>
+
+<%= link_to 'Edit', edit_peg_group_path(@peg_group) %> |
+<%= link_to 'Back', peg_groups_path %>

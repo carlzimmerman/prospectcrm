@@ -3,6 +3,17 @@
 <h1>
   <%= @peg_group.firm_name %>
 </h1>
+<% @peg_group.point_of_contacts.each do |poc| %>
+  <p>
+    <strong>Name:</strong>
+    <%= poc.first_name %><%= poc.last_name %>
+    <strong>Title:</strong>
+    <%= poc.title %>
+    <strong>Info:</strong>
+    <%= poc.email %>     <%= poc.phone %>
+
+  </p>
+<% end %>
 
 <p>
   <strong>Website:</strong>
@@ -38,6 +49,33 @@
   </p>
 <% end %>
 
+<h2>Add new point of contact</h2>
+<%= form_for([ @peg_group, @peg_group.point_of_contacts.build ]) do |form| %>
+
+  <p>
+    <%= form.label :first_name %><br>
+    <%= form.text_area :first_name %>
+  </p>
+  <p>
+    <%= form.label :last_name %><br>
+    <%= form.text_area :last_name %>
+  </p>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_area :title %>
+  </p>
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+  </p>
+  <p>
+    <%= form.label :phone %><br>
+    <%= form.text_area :phone %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_peg_group_path(@peg_group) %> |
 <%= link_to 'Back', peg_groups_path %>

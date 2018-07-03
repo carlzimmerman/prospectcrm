@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :peg_contact_infos
   resources :peg_groups do
     resources :logs
+    resources :point_of_contacts
+
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

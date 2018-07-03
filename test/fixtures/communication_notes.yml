@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: MyText
+  notes: 
+  prospect_status: MyText
+
+two:
+  type: MyText
+  notes: 
+  prospect_status: MyText

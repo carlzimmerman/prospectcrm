@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :peg_groups
-  resources :pegs
+  resources :communication_notes
+  resources :peg_contact_infos
+  resources :peg_groups do
+    resources :logs
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

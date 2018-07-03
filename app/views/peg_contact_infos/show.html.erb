@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @peg_contact_info.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @peg_contact_info.last_name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @peg_contact_info.title %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @peg_contact_info.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @peg_contact_info.phone %>
+</p>
+
+<%= link_to 'Edit', edit_peg_contact_info_path(@peg_contact_info) %> |
+<%= link_to 'Back', peg_contact_infos_path %>

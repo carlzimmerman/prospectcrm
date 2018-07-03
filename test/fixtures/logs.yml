@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  notes: MyText
+  status: MyString
+  peg_group_id: 
+
+two:
+  type: 
+  notes: MyText
+  status: MyString
+  peg_group_id: 

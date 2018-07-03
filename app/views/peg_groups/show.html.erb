@@ -10,5 +10,26 @@
   <%= @peg_group.website %>
 </p>
 
+<h2>Add a contact Log:</h2>
+<%= form_for([ @peg_group, @peg_group.logs.build ]) do |form| %>
+
+  <p>
+    <%= form.label :type %><br>
+    <%= form.text_field :type %>
+  </p>
+  <p>
+    <%= form.label :notes %><br>
+    <%= form.text_area :notes %>
+  </p>
+  <p>
+    <%= form.label :status %><br>
+    <%= form.text_field :status %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
 <%= link_to 'Edit', edit_peg_group_path(@peg_group) %> |
 <%= link_to 'Back', peg_groups_path %>

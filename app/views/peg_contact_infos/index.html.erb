@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Peg Contact Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Title</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @peg_contact_infos.each do |peg_contact_info| %>
+      <tr>
+        <td><%= peg_contact_info.first_name %></td>
+        <td><%= peg_contact_info.last_name %></td>
+        <td><%= peg_contact_info.title %></td>
+        <td><%= peg_contact_info.email %></td>
+        <td><%= peg_contact_info.phone %></td>
+        <td><%= link_to 'Show', peg_contact_info %></td>
+        <td><%= link_to 'Edit', edit_peg_contact_info_path(peg_contact_info) %></td>
+        <td><%= link_to 'Destroy', peg_contact_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peg contact info', new_peg_contact_info_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @communication_note.type %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @communication_note.notes %>
+</p>
+
+<p>
+  <strong>Prospect status:</strong>
+  <%= @communication_note.prospect_status %>
+</p>
+
+<%= link_to 'Edit', edit_communication_note_path(@communication_note) %> |
+<%= link_to 'Back', communication_notes_path %>

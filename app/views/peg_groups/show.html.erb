@@ -1,29 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Firm name:</strong>
+<h1>
   <%= @peg_group.firm_name %>
-</p>
+</h1>
 
 <p>
   <strong>Website:</strong>
   <%= @peg_group.website %>
 </p>
 
+<h2>Contact Comments</h2>
+<% @peg_group.logs.each do |log| %>
+  <p>
+    <strong>Status:</strong>
+    <%= log.status %>
+    <strong>Notes:</strong>
+    <%= log.notes %>
+    <strong>Logged at:</strong>
+    <%= log.updated_at %>
+
+  </p>
+<% end %>
+
 <h2>Add a contact Log:</h2>
 <%= form_for([ @peg_group, @peg_group.logs.build ]) do |form| %>
 
-  <p>
-    <%= form.label :type %><br>
-    <%= form.text_field :type %>
-  </p>
   <p>
     <%= form.label :notes %><br>
     <%= form.text_area :notes %>
   </p>
   <p>
     <%= form.label :status %><br>
-    <%= form.text_field :status %>
+    <%= form.text_area :status %>
   </p>
   <p>
     <%= form.submit %>

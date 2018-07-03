@@ -72,6 +72,6 @@ class CommunicationNotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def communication_note_params
-      params.require(:communication_note).permit(:type, :notes, :prospect_status)
+      params.require(:communication_note).permit(:contact_type, :notes, :prospect_status)
     end
 end

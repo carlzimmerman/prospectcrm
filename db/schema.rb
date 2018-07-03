@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180703132018) do
   end
 
   create_table "logs", force: :cascade do |t|
-    t.string   "type"
+    t.string   "contact_type"
     t.text     "notes"
     t.string   "status"
     t.integer  "peg_group_id"

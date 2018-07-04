@@ -1,29 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="showfuse-centered">
+  <p id="notice"><%= notice %></p>
 
-<h1>Listing Peg Groups</h1>
+  <h1>Showfuse PEG Prospecting CRM</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Firm name</th>
-      <th>Website</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @peg_groups.each do |peg_group| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= peg_group.firm_name %></td>
-        <td><%= peg_group.website %></td>
-        <td><%= link_to 'Show', peg_group %></td>
-        <td><%= link_to 'Edit', edit_peg_group_path(peg_group) %></td>
-        <td><%= link_to 'Destroy', peg_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Firm name</th>
+        <th>Website</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @peg_groups.each do |peg_group| %>
+        <tr>
+          <td><%= peg_group.firm_name %></td>
+          <td><%= peg_group.website %></td>
+          <td><%= link_to 'Show', peg_group %></td>
+          <td><%= link_to 'Edit', edit_peg_group_path(peg_group) %></td>
+          <td><%= link_to 'Destroy', peg_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Peg group', new_peg_group_path %>
+  <br>
+
+  <%= link_to 'New Peg group', new_peg_group_path %>
+
+</div>

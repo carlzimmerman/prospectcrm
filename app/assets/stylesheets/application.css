@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+
+.showfuse-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}

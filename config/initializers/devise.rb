@@ -258,6 +258,7 @@ Devise.setup do |config|
   #
   #     mount MyEngine, at: '/my_engine'
   #
+  config.assets.initialize_on_precompile = false
   # The router that invoked `devise_for`, in the example above, would be:
   # config.router_name = :my_engine
   #

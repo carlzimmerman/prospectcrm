@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :communication_notes
   resources :peg_contact_infos
   resources :peg_groups do
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
     resources :point_of_contacts
 
   end
+
+  root to: 'peg_groups_path#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -17,8 +17,9 @@
 
 <p>
   <strong>Website:</strong>
-  <%= @peg_group.website %>
+  <a href="<%= @peg_group.website %>" target="_blank"><%= @peg_group.website %></a>
 </p>
+
 
 <h2>Contact Comments</h2>
 <% @peg_group.logs.each do |log| %>
